@@ -1,5 +1,3 @@
-/* Depois fazer a verificação dessa área do perfil */
-
 /* const photoForm = document.getElementById('photo-form');
 const profilePhoto = document.getElementById('profile-photo');
 
@@ -9,4 +7,4 @@ function fillProfileData() {
   const emailField = document.getElementById('email');
   const passwordField = document.getElementById('password');
 
-  nameField.value = profile.name;  */
+  nameField.value = profile.name; */ 
