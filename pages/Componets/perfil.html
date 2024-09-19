@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,100 +12,96 @@
           integrity="sha384-ADP+IGPWusOfgAaLmkiZD/qm1l0AKRvOLBmOzhJyfRpNNRIwuQHZ1q3xTCopn2+g"
           crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/style.css" />
 </head>
 <body>
-    <nav
-    class="navbar navbar-expand-lg navbar-light mb-5"
-    style="background-color: #e3f2fd"
-  >
-    <div class="container">
-      <a class="navbar-brand" href="../home.html">
-        <img src="../../images/log.png" width="50px" alt="Orçamento pessoal" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img src="../../images/home/logo.webp" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="../home.html">Cadastro</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../consulta.html">Consulta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="animais.html">Animais</a>
-          </li>
-        </ul>
-
-        <form class="form-inline my-2 my-lg-0">
-          <a class="navbar-brand" href="perfil.html">
-            <img src="../../images/perfil.png" width="30px" alt="perfil" />
-          </a>
-          <button id="sair" class="btn btn-outline-danger my-2 my-sm-0" type="submit">
-            Sair
-          </button>
-        </form>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="../home.html" class="nav-link">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a href="../consulta.html" class="nav-link">Consulta</a>
+            </li>
+            <li class="nav-item">
+              <a href="animais.html" class="nav-link">Animais</a>
+            </li>
+            <li class="nav-item">
+              <a href="perfil.html" class="nav-link">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a href="../../index.html" class="btn btn-outline-primary ml-3">Sair</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title">Foto de Perfil</h4>
+    </nav>
+  </header>
+
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Foto de Perfil</h4>
+            </div>
+            <div class="card-body">
+              <img id="profile-photo" src="../../images/perfil.png" class="img-fluid mb-3" alt="Foto de Perfil">
+              <form id="photo-form">
+                <div class="form-group">
+                  <label for="photo">Adicionar Foto</label>
+                  <input type="file" id="photo" name="photo" class="form-control-file">
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+              </form>
+            </div>
           </div>
-          <div class="card-body">
-            <img id="profile-photo" src="../../images/perfil.png" class="img-fluid mb-3" alt="Foto de Perfil">
-            <form id="photo-form">
+        </div>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Informações de Perfil</h4>
+            </div>
+            <div class="card-body">
               <div class="form-group">
-                <label for="photo">Adicionar Foto</label>
-                <input type="file" id="photo" name="photo" class="form-control-file">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" class="form-control" readonly>
               </div>
-              <button type="submit" class="btn btn-primary">Salvar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title">Informações de Perfil</h4>
-          </div>
-          <div class="card-body">
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input type="text" id="name" name="name" class="form-control" readonly>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" class="form-control" readonly>
-            </div>
-            <div class="form-group">
-              <label for="password">Senha</label>
-              <input type="password" id="password" name="password" class="form-control" readonly>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" readonly>
+              </div>
+              <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" class="form-control" readonly>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script>  
-    const btnSair = document.getElementById('sair');
-    btnSair.addEventListener('click', function() {
-      window.location.href = '../home.html';
-    });
-  </script>
-  <script src="../../js/perfil.js" type="text/javascript"></script>
+
+    <script>  
+      const btnSair = document.getElementById('sair');
+      btnSair.addEventListener('click', function() {
+        window.location.href = '../home.html';
+      });
+    </script>
+    <script src="../../js/perfil.js" type="text/javascript"></script>
 </body>
 </html>

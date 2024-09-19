@@ -1,0 +1,66 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#logoLogin {
+  width: 18em; /* Ajuste o valor conforme necessário */
+  height: 9em; /* Mantém a proporção original da imagem */
+}
+
+input[type="email"], input[type="password"] {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #6c757d;
+}
+
+button {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+a {
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .content {
+      padding: 20px;
+      width: 90%;
+  }
+
+  .logo {
+      max-height: 40px;
+  }
+
+  button {
+      font-size: 16px;
+  }
+}
